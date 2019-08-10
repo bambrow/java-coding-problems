@@ -1,3 +1,2 @@
-# Java Coding Problems
+# Initial page
 
-This repository contains the coding problems related to Java.
