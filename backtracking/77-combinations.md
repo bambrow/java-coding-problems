@@ -29,7 +29,7 @@ class Solution {
         DFS(n, k, 1, ans, cur);
         return ans;
     }
-    
+
     public void DFS(int n, int k, int level, List<List<Integer>> ans, List<Integer> cur) {
         if (cur.size() == k) {
             ans.add(new ArrayList<Integer>(cur));

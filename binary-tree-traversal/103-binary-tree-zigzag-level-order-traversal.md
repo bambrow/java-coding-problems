@@ -75,15 +75,15 @@ class Solution {
 
 class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        
+
         List<List<Integer>> res = new LinkedList<>();
-        
+
         if (root != null) {
-            
+
             Deque<TreeNode> deque = new LinkedList<>();
             boolean leftSide = true;
             deque.offerFirst(root);
-            
+
             while (!deque.isEmpty()) {
                 int levelCount = deque.size();
                 List<Integer> snapshot = new LinkedList<>();
@@ -104,11 +104,11 @@ class Solution {
                 res.add(snapshot);
                 leftSide = !leftSide;
             }
-            
+
         }
-        
+
         return res;
-        
+
     }
 }
 ```

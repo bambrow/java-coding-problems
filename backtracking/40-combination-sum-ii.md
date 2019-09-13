@@ -9,8 +9,8 @@ Each number in C may only be used once in the combination.
 Note:
 All numbers (including target) will be positive integers.
 The solution set must not contain duplicate combinations.
-For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8, 
-A solution set is: 
+For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8,
+A solution set is:
 [
   [1, 7],
   [1, 2, 5],
@@ -33,7 +33,7 @@ class Solution {
         DFS(candidates, target, 0, ans, cur);
         return ans;
     }
-    
+
     public void DFS(int[] candidates, int target, int level, List<List<Integer>> ans, List<Integer> cur) {
         if (target == 0) {
             ans.add(new ArrayList<Integer>(cur));

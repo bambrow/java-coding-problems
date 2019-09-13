@@ -56,9 +56,9 @@ class Solution {
 
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
-        
+
         List<Integer> res = new LinkedList<>();
-        
+
         if (root != null) {
             Stack<TreeNode> stack = new Stack<TreeNode>();
             stack.push(root);
@@ -70,9 +70,9 @@ class Solution {
                 if (cur.left != null) stack.push(cur.left);
             }
         }
-        
+
         return res;
-        
+
     }
 }
 ```

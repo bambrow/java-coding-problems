@@ -22,7 +22,7 @@ class Solution {
         DFS(list, str, n, n);
         return list;
     }
-    
+
     private void DFS(List<String> list, StringBuilder str, int l, int r) {
         if (l == 0 && r == 0) {
             list.add(str.toString());

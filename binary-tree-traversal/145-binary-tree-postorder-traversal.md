@@ -62,9 +62,9 @@ class Solution {
 
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
-        
+
         List<Integer> res = new LinkedList<>();
-        
+
         if (root != null) {
             Stack<TreeNode> stack = new Stack<>();
             stack.push(root);
@@ -76,9 +76,9 @@ class Solution {
                 if (cur.right != null) stack.push(cur.right);
             }
         }
-        
+
         return res;
-        
+
     }
 }
 ```

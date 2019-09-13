@@ -23,13 +23,13 @@ Given n = 3, there are a total of 5 unique BST's.
 // UT(k) = 1, if k <= 0
 
 class Solution {
-    
+
     public int numTrees(int n) {
         if (n == 0) return 0;
         int[] look = new int[n];
         return UT(n-1, look);
     }
-    
+
     private int UT(int k, int[] look) {
         if (k <= 0) return 1;
         if (look[k] != 0) return look[k];
@@ -38,14 +38,14 @@ class Solution {
         }
         return look[k];
     }
-    
+
     /*
     public int numTrees(int n) {
         if (n == 0) return 0;
         int[][] look = new int[n][n];
         return UT(0, n-1, look);
     }
-    
+
     private int UT(int i, int k, int[][] look) {
         if (i >= k) return 1;
         if (look[i][k] != 0) return look[i][k];

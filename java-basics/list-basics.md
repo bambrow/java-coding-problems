@@ -21,7 +21,7 @@ public class ListBasics{
         System.out.println(list.contains(5)); // false
         list.clear();
         System.out.println(list.toString()); // []
-        
+
         List<Integer> list2 = new ArrayList<>(10);
         list2.add(7);
         list2.add(8);
@@ -45,7 +45,7 @@ public class ListBasics{
         System.out.println(list.set(0,5)); // 7
         System.out.println(list.toString()); // [5, 9, 8, 9]
         System.out.println(list.size()); // 4
-        
+
         list2.clear();
         list2.add(9);
         System.out.println(list.toString()); // [5, 9, 8, 9]
@@ -67,12 +67,12 @@ public class ListBasics{
         System.out.println(list2.toString()); // [9, 7, 6]
         System.out.println(list.retainAll(list2)); // true
         System.out.println(list.toString()); // [6, 9, 9, 7]
-        
+
         List<Integer> list3 = new LinkedList<>(list);
         System.out.println(list3.toString()); // [6, 9, 9, 7]
         List<Integer> list4 = new ArrayList<>(list);
         System.out.println(list4.toString()); // [6, 9, 9, 7]
-        
+
         List<Integer> sub = list.subList(0,3); // [6, 9, 9]
         System.out.println(sub.toString());
         Integer[] arr = new Integer[list.size()];

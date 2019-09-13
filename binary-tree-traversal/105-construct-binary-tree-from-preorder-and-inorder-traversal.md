@@ -27,15 +27,15 @@ You may assume that duplicates do not exist in the tree.
 
 class Solution {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        
+
         if (preorder.length == 0 || inorder.length == 0) return null;
-        
+
         TreeNode root = new TreeNode(preorder[0]);
         TreeNode cur = root;
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
         boolean leftSide = true;
-        
+
         for (int i = 1, j = 0; i < preorder.length; ) {
             if (!stack.isEmpty() && stack.peek().val == inorder[j]) {
                 cur = stack.pop();
@@ -54,9 +54,9 @@ class Solution {
                 i++;
             }
         }
-        
+
         return root;
-        
+
     }
 }
 ```

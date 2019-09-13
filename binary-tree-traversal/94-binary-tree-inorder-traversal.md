@@ -56,9 +56,9 @@ class Solution {
 
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
-        
+
         List<Integer> res = new LinkedList<>();
-        
+
         if (root != null) {
             Stack<TreeNode> stack = new Stack<>();
             TreeNode cur = root;
@@ -73,7 +73,7 @@ class Solution {
                 }
             }
         }
-        
+
         return res;
     }
 }

@@ -6,7 +6,7 @@ Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number o
 
 Find the maximum coins you can collect by bursting the balloons wisely.
 
-Note: 
+Note:
 (1) You may imagine nums[-1] = nums[n] = 1. They are not real therefore you can not burst them.
 (2) 0 ≤ n ≤ 500, 0 ≤ nums[i] ≤ 100
 

@@ -7,9 +7,9 @@ You are given a list of non-negative integers, a1, a2, ..., an, and a target, S.
 Find out how many ways to assign symbols to make sum of integers equal to target S.
 
 Example 1:
-Input: nums is [1, 1, 1, 1, 1], S is 3. 
+Input: nums is [1, 1, 1, 1, 1], S is 3.
 Output: 5
-Explanation: 
+Explanation:
 
 -1+1+1+1+1 = 3
 +1-1+1+1+1 = 3
@@ -27,7 +27,7 @@ Your output answer is guaranteed to be fitted in a 32-bit integer.
 // TS(S,0) = 2, if S = nums[0] and nums[0] = 0
 // TS(S,0) = 1, if S = nums[0] or S = -nums[0], and nums[0] != 0
 // TS(S,0) = 0, if S != nums[0] and S != -nums[0]
-// TS(S,i) = 
+// TS(S,i) =
 //    TS(S-nums[i], i-1) + TS(S+nums[i], i-1), if S-nums[i] >= -sum and S+nums[i] <= sum
 //    TS(S-nums[i], i-1), if S-nums[i] >= -sum and S+nums[i] > sum
 //    TS(S+nums[i], i-1), if S-nums[i] < -sum and S+nums[i] <= sum
@@ -43,7 +43,7 @@ class Solution {
         int[][] look = new int[2*sum+1][nums.length];
         return TS(S+sum, nums.length-1, nums, look, sum);
     }
-    
+
     private int TS(int S, int i, int[] nums, int[][] look, int sum) {
         if (look[S][i] != 0) return look[S][i];
         if (i == 0) {

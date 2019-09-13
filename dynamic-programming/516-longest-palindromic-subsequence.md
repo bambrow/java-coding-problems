@@ -32,7 +32,7 @@ class Solution {
         int[][] look = new int[l][l];
         return LPS(s, 0, l-1, look);
     }
-    
+
     private int LPS(String s, int i, int j, int[][] look) {
         if (look[i][j] != 0) return look[i][j];
         if (i > j) look[i][j] = 0;

@@ -6,7 +6,7 @@ public class MathBasics{
      public static void main(String []args){
         System.out.println(Math.E); // 2.718281828459045
         System.out.println(Math.PI); // 3.141592653589793
-        
+
         System.out.println(Math.abs(-1.999)); // 1.999
         System.out.println(Math.ceil(-1.999)); // -1.0
         System.out.println(Math.exp(0.5)); // 1.6487212707001282

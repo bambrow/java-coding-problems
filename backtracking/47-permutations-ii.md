@@ -29,7 +29,7 @@ class Solution {
         DFS(cur, nums.length, ans, map);
         return ans;
     }
-    
+
     public void DFS(List<Integer> cur, int height, List<List<Integer>> ans, Map<Integer,Integer> map) {
         if (height == 0) {
             ans.add(new ArrayList<Integer>(cur));

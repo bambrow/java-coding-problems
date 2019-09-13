@@ -33,7 +33,7 @@ class Solution {
         int[][] look = new int[m+1][n+1];
         return ED(word1, word2, m, n, look);
     }
-    
+
     private int ED(String w1, String w2, int i, int j, int[][] look) {
         if (i == 0 && j == 0) return 0;
         if (look[i][j] != 0) return look[i][j];

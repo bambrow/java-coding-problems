@@ -6,7 +6,7 @@ public class WrapperBasics{
      public static void main(String []args){
         System.out.println(Integer.MAX_VALUE); // 2147483647
         System.out.println(Integer.MIN_VALUE); // -2147483648
-        
+
         Integer i = 15;
         System.out.println(Integer.decode("123")); // 123
         System.out.println(i.intValue()); // 15
@@ -15,7 +15,7 @@ public class WrapperBasics{
         System.out.println(Integer.parseUnsignedInt("123")); // 123
         System.out.println(Integer.valueOf("-123")); // -123
         System.out.println(i.toString()); // 15
-        
+
         System.out.println(Integer.reverse(1)); // -2147483648
         System.out.println(Integer.reverseBytes(1)); // 16777216
         System.out.println(Integer.bitCount(65535)); // 16
@@ -37,7 +37,7 @@ public class WrapperBasics{
         System.out.println(Integer.toString(65535, 16)); // ffff
         System.out.println(Integer.toString(65535, 32)); // 1vvv
         System.out.println(Integer.toString(65535, 36)); // 1ekf
-        
+
         Double d = Double.POSITIVE_INFINITY;
         System.out.println(Double.MAX_VALUE); // 1.7976931348623157E308
         System.out.println(Double.MIN_VALUE); // 4.9E-324
@@ -50,12 +50,12 @@ public class WrapperBasics{
         System.out.println(Double.isFinite(d)); // false
         System.out.println(Double.isInfinite(-d)); // true
         System.out.println(Double.isNaN(d)); // false
-        
+
         Boolean b = Boolean.TRUE;
         System.out.println(Boolean.parseBoolean("TrUE")); // true
         System.out.println(Boolean.valueOf("tRuE")); // true
         System.out.println(b.toString()); // true
-        
+
         Character c = Character.MAX_VALUE;
         System.out.println(Character.getNumericValue('7')); // 7
         System.out.println(Character.valueOf('c')); // c

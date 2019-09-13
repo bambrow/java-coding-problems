@@ -70,23 +70,23 @@ return its vertical order traversal as:
  * }
  */
 class Solution {
-    
+
     public List<List<Integer>> verticalOrder(TreeNode root) {
-        
+
         List<List<Integer>> list = new LinkedList<>();
         if (root == null) return list;
-        
+
         TreeNode cur = root;
         int col = 0;
-        
+
         Map<Integer,List<Integer>> map = new HashMap<>();
         int[] range = new int[2];
-        
+
         Queue<TreeNode> nodeQueue = new LinkedList<>();
         Queue<Integer> colQueue = new LinkedList<>();
         nodeQueue.offer(cur);
         colQueue.offer(0);
-        
+
         while (!nodeQueue.isEmpty()) {
             int size = nodeQueue.size();
             for (int i = 0; i < size; i++) {
@@ -111,15 +111,15 @@ class Solution {
                 }
             }
         }
-        
+
         for (int i = range[0]; i <= range[1]; i++) {
             list.add(map.get(i));
         }
-        
+
         return list;
-        
+
     }
-    
+
 }
 
 ```

@@ -11,7 +11,7 @@ public class DequeBasics{
         Deque<Integer> deque = new LinkedList<>();
         // we will not actually write the methods that can throw exceptions in this code
         // but they will still be mentioned
-        
+
         deque.offerFirst(5);
         deque.offerLast(7);
         deque.offerFirst(6);
@@ -21,7 +21,7 @@ public class DequeBasics{
         deque2.offerFirst(3);
         deque2.offerLast(8);
         System.out.println(deque2); // [3, 8]
-        
+
         System.out.println(deque2.peekFirst()); // 3
         System.out.println(deque2.peekLast()); // 8
         // throw exception version: getFirst and getLast
@@ -30,7 +30,7 @@ public class DequeBasics{
         System.out.println(deque2.pollLast()); // 8
         // throe exception version: removeFirst and removeLast
         System.out.println(deque2); // []
-        
+
         System.out.println(deque.isEmpty()); // false
         System.out.println(deque.size()); // 3
         System.out.println(deque.contains(7)); // true
@@ -48,7 +48,7 @@ public class DequeBasics{
         System.out.println(deque.removeLastOccurrence(6)); // true
         System.out.println(deque); // [6, 5]
         deque.clear();
-        
+
         // use deque as queue
         deque.offer(3);
         System.out.println(deque.offer(6)); // true
@@ -65,7 +65,7 @@ public class DequeBasics{
         // element = getFirst
         System.out.println(deque); // [6]
         deque.clear();
-        
+
         // use deque as stack
         deque.push(3);
         // push is a void method

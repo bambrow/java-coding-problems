@@ -23,7 +23,7 @@ public class SortedSetBasics{
         set2.add(2);
         set2.add(4);
         set2.add(6);
-        System.out.println(set.addAll(set2)); // true 
+        System.out.println(set.addAll(set2)); // true
         System.out.println(set); // [1, 2, 3, 4, 5, 6, 7]
         System.out.println(set.isEmpty()); // false
         System.out.println(set.size()); // 7
@@ -35,9 +35,9 @@ public class SortedSetBasics{
         System.out.println(set.contains(5)); // true
         System.out.println(set.remove(5)); // true
         System.out.println(set);  // [1, 2, 3, 4, 6, 7]
-        
+
         Iterator<Integer> iter = set.iterator();
-        // Returns an iterator over the elements in this set. 
+        // Returns an iterator over the elements in this set.
         // The elements are returned in no particular order (unless this set is an instance of some class that provides a guarantee).
         while (iter.hasNext()) {
         	System.out.println(iter.next());

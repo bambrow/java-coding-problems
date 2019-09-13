@@ -25,7 +25,7 @@ class Solution {
         DFS(digits, 0, ans, lookup, cur);
         return ans;
     }
-    
+
     public void DFS(String digits, int level, List<String> ans, String[] lookup, StringBuilder cur) {
         if (level == digits.length()) {
             ans.add(cur.toString());

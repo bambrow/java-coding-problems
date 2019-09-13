@@ -24,7 +24,7 @@ class Solution {
         DFS(nums, 0, ans);
         return ans;
     }
-    
+
     public void DFS(int[] nums, int level, List<List<Integer>> ans) {
         if (level == nums.length) {
             ans.add(generateList(nums));
@@ -36,7 +36,7 @@ class Solution {
             temp = nums[i]; nums[i] = nums[level]; nums[level] = temp;
         }
     }
-    
+
     public List<Integer> generateList(int[] nums) {
         List<Integer> list = new ArrayList<>(nums.length);
         for (int num: nums) list.add(num);
@@ -56,7 +56,7 @@ class Solution {
         DFS(nums, nums.length-1, ans);
         return ans;
     }
-    
+
     public void DFS(int[] nums, int height, List<List<Integer>> ans) {
         if (height == 0) {
             ans.add(generateList(nums));
@@ -68,7 +68,7 @@ class Solution {
             temp = nums[i]; nums[i] = nums[height]; nums[height] = temp;
         }
     }
-    
+
     public List<Integer> generateList(int[] nums) {
         List<Integer> list = new ArrayList<>(nums.length);
         for (int num: nums) list.add(num);

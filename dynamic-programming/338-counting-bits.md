@@ -27,7 +27,7 @@ Can you do it like a boss? Do it without using any builtin function like __built
 // 这个解法的确聪明，但是我一时半会是想不出来的。我短时间只能想到被注释的解法。
 
 class Solution {
-    
+
     public int[] countBits(int num) {
         int[] look = new int[num+1];
         for (int i = 1; i < num+1; i++) {
@@ -35,7 +35,7 @@ class Solution {
         }
         return look;
     }
-    
+
     /*
     public int[] countBits(int num) {
         int[] look = new int[num+1];

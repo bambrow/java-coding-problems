@@ -72,7 +72,7 @@ class Solution {
 
 class Solution {
     public void flatten(TreeNode root) {
-        
+
         if (root == null) return;
         TreeNode cur = root;
         while (cur != null) {
@@ -85,7 +85,7 @@ class Solution {
             }
             cur = cur.right;
         }
-        
+
     }
 }
 ```

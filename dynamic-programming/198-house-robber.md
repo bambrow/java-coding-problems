@@ -16,7 +16,7 @@ Given a list of non-negative integers representing the amount of money of each h
 // 其实还可以进一步简化，摒弃look数组，直接用三个数循环计算。
 
 class Solution {
-    
+
     public int rob(int[] nums) {
         int l = nums.length;
         if (l == 0) return 0;
@@ -27,7 +27,7 @@ class Solution {
         }
         return look[l];
     }
-    
+
     /*
     public int rob(int[] nums) {
         int l = nums.length;

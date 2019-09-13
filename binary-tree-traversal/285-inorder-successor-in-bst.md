@@ -18,7 +18,7 @@ Note: If the given node has no in-order successor in the tree, return null.
  * }
  */
 class Solution {
-    
+
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
         if (root == null) return null;
         TreeNode cur = root;
@@ -38,7 +38,7 @@ class Solution {
         }
         return prev;
     }
-    
+
     /*
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
         if (root == null) return null;

@@ -68,14 +68,14 @@ class Solution {
 
 class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        
+
         List<List<Integer>> res = new LinkedList<>();
-        
+
         if (root != null) {
-            
+
             Queue<TreeNode> queue = new LinkedList<>();
             queue.offer(root);
-            
+
             while (!queue.isEmpty()) {
                 int levelCount = queue.size();
                 List<Integer> snapshot = new LinkedList<>();
@@ -88,11 +88,11 @@ class Solution {
                 }
                 ((LinkedList) res).addFirst(snapshot);
             }
-            
+
         }
-        
+
         return res;
-        
+
     }
 }
 ```

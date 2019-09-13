@@ -30,7 +30,7 @@ class Solution {
         DFS(nums, 0, ans, cur);
         return ans;
     }
-    
+
     public void DFS(int[] nums, int level, List<List<Integer>> ans, List<Integer> cur) {
         ans.add(new ArrayList<Integer>(cur));
         if (level == nums.length) return;

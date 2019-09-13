@@ -29,15 +29,15 @@ public class QueueBasics{
         System.out.println(queue); // [7, 5, 6]
         System.out.println(queue.isEmpty()); // false
         System.out.println(queue.size()); // 3
-        
+
         Queue<Integer> queue2 = new ArrayDeque<>();
         queue2.offer(2);
         queue2.offer(1);
         queue.addAll(queue2);
         System.out.println(queue); // [7, 5, 6, 2, 1]
-        
+
         Iterator<Integer> iter = queue.iterator();
-        // Returns an iterator over the elements in this queue. 
+        // Returns an iterator over the elements in this queue.
         // The elements are returned in no particular order (unless this set is an instance of some class that provides a guarantee).
         while (iter.hasNext()) {
         	System.out.println(iter.next());

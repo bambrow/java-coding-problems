@@ -20,7 +20,7 @@ class Solution {
         if (l == 1) return nums[0];
         return Math.max(circleRob(nums, 0, l-2), circleRob(nums, 1, l-1));
     }
-    
+
     private int circleRob(int[] nums, int i, int j) {
         int x = 0, y = nums[i], z = nums[i];
         for (int k = i+1; k <= j; k++) {

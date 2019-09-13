@@ -38,8 +38,8 @@ class Solution {
         int m = dungeon.length, n = dungeon[0].length;
         int[][] look = new int[m][n];
         return DG(dungeon,m,n,0,0,look);
-    } 
-    
+    }
+
     private int DG(int[][] d, int m, int n, int i, int j, int[][] look) {
         if (look[i][j] != 0) return look[i][j];
         if (i == m-1 && j == n-1) {

@@ -25,30 +25,30 @@ Return 6.
 
 class Solution {
     public int maximalRectangle(char[][] matrix) {
-        
+
         if (matrix.length == 0 || matrix[0].length == 0) return 0;
-        
+
         int m = matrix.length, n = matrix[0].length;
         int[][] heights = new int[m][n];
-        
+
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (matrix[i][j] == '0') heights[i][j] = 0;
                 else heights[i][j] = i == 0 ? 1 : heights[i-1][j]+1;
             }
         }
-        
+
         int max = 0;
         for (int i = 0; i < m; i++) {
             max = Math.max(max, largestRectangleArea(heights[i]));
         }
-        
+
         return max;
-        
+
     }
-    
+
     public int largestRectangleArea(int[] heights) {
-        
+
         Stack<Integer> s = new Stack<>();
         int max = 0;
         for (int i = 0; i <= heights.length; ) {
@@ -61,9 +61,9 @@ class Solution {
                 max = Math.max(max, heights[t] * (s.isEmpty() ? i : i-1-s.peek()));
             }
         }
-        
+
         return max;
-        
+
     }
 }
 ```

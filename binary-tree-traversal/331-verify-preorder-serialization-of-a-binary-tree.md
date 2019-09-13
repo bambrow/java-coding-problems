@@ -38,7 +38,7 @@ class Solution {
     public boolean isValidSerialization(String preorder) {
         String[] nodes = preorder.split(",");
         int in = 0; // non-null node provides 1 in-degree and 2 out-degree; null node provides 1 in-degree only
-        int out = 0; 
+        int out = 0;
         for (String node : nodes) {
             if (++in > out + 1) return false;
             if (!node.equals("#")) out += 2;

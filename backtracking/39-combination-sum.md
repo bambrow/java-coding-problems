@@ -9,8 +9,8 @@ The same repeated number may be chosen from C unlimited number of times.
 Note:
 All numbers (including target) will be positive integers.
 The solution set must not contain duplicate combinations.
-For example, given candidate set [2, 3, 6, 7] and target 7, 
-A solution set is: 
+For example, given candidate set [2, 3, 6, 7] and target 7,
+A solution set is:
 [
   [7],
   [2, 2, 3]
@@ -27,7 +27,7 @@ class Solution {
         DFS(candidates, target, 0, ans, cur);
         return ans;
     }
-    
+
     public void DFS(int[] candidates, int target, int level, List<List<Integer>> ans, List<Integer> cur) {
         if (target == 0) {
             ans.add(new ArrayList<Integer>(cur));

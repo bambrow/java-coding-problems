@@ -27,10 +27,10 @@ class Solution {
         }
         return sell;
     }
-    
+
     /*
     1st thought:
-    
+
     The natural states for this problem is the 3 possible transactions : buy, sell, rest. Here rest means no transaction on that day (aka cooldown).
 
     Then the transaction sequences can end with any of these three states.
@@ -45,17 +45,17 @@ class Solution {
 
     Then we want to deduce the transition functions for buy sell and rest. By definition we have:
 
-    buy[i]  = max(rest[i-1]-price, buy[i-1]) 
+    buy[i]  = max(rest[i-1]-price, buy[i-1])
     sell[i] = max(buy[i-1]+price, sell[i-1])
     rest[i] = max(sell[i-1], buy[i-1], rest[i-1])
-    
+
     Where price is the price of day i. All of these are very straightforward. They simply represents :
 
-    (1) We have to `rest` before we `buy` and 
+    (1) We have to `rest` before we `buy` and
     (2) we have to `buy` before we `sell`
-    
+
     2nd thought:
-    
+
     One tricky point is how do you make sure you sell before you buy, since from the equations it seems that [buy, rest, buy] is entirely possible.
 
     Well, the answer lies within the fact that buy[i] <= rest[i] which means rest[i] = max(sell[i-1], rest[i-1]). That made sure [buy, rest, buy] is never occurred.

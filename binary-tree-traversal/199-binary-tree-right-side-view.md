@@ -72,7 +72,7 @@ class Solution {
             cur = cur.right;
         }
         return pushed;
-    
+
     }
     */
 }

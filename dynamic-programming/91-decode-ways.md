@@ -33,7 +33,7 @@ class Solution {
         for (int i = 0; i < l+1; i++) look[i] = -1;
         return ND(s,l,look);
     }
-    
+
     private int ND(String s, int l, int[] look) {
         if (l == 0) return 1;
         if (l == 1) return s.charAt(0) == '0' ? 0 : 1;
@@ -43,7 +43,7 @@ class Solution {
             else look[l] = 0;
         } else {
             if (s.charAt(l-2) == '0') look[l] = ND(s,l-1,look);
-            else if ((s.charAt(l-2) == '2' && s.charAt(l-1) <= '6') || (s.charAt(l-2) == '1' && s.charAt(l-1) <= '9')) 
+            else if ((s.charAt(l-2) == '2' && s.charAt(l-1) <= '6') || (s.charAt(l-2) == '1' && s.charAt(l-1) <= '9'))
                 look[l] = ND(s,l-1,look) + ND(s,l-2,look);
             else look[l] = ND(s,l-1,look);
         }

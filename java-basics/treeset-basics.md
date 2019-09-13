@@ -22,7 +22,7 @@ public class TreeSetBasics{
         set2.add(2);
         set2.add(4);
         set2.add(6);
-        System.out.println(set.addAll(set2)); // true 
+        System.out.println(set.addAll(set2)); // true
         System.out.println(set); // [1, 2, 3, 4, 5, 6, 7]
         System.out.println(set.isEmpty()); // false
         System.out.println(set.size()); // 7
@@ -32,7 +32,7 @@ public class TreeSetBasics{
         System.out.println(set.headSet(3)); // [1, 2]
         System.out.println(set.tailSet(3)); // [3, 4, 5, 6, 7]
         set.clear();
-        
+
         set.add(1);
         set.add(3);
         set.add(5);
@@ -50,7 +50,7 @@ public class TreeSetBasics{
         System.out.println(set.higher(9)); // null
         System.out.println(set.floor(0)); // null
         System.out.println(set.lower(0)); // null
-        
+
         System.out.println(set.descendingSet()); // [7, 5, 3, 1]
         System.out.println(set.pollFirst()); // 1
         System.out.println(set); // [3, 5, 7]
@@ -59,7 +59,7 @@ public class TreeSetBasics{
         System.out.println(set.contains(5)); // true
         System.out.println(set.remove(5)); // true
         System.out.println(set); // [3]
-        
+
         set.add(1);
         set.add(3);
         set.add(5);
