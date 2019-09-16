@@ -96,7 +96,7 @@ class Solution {
     }
 
     public List<Integer> numIslands2(int m, int n, int[][] positions) {
-        
+
         List<Integer> list = new LinkedList<>();
         UF uf = new UF(m*n); // union-find
 
