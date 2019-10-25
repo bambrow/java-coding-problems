@@ -140,4 +140,11 @@
    * [1 Two Sum](array/1_two_sum.md)
    * [74 Search a 2D Matrix](array/74_search_a_2d_matrix.md)
    * [240 Search a 2D Matrix II](array/240_search_a_2d_matrix_ii.md)
+   * [54 Spiral Matrix](array/54_spiral_matrix.md)
+   * [59 Spiral Matrix II](array/59_spiral_matrix_ii.md)
+   * [73 Set Matrix Zeroes](array/73_set_matrix_zeroes.md)
+   * [118 Pascal's Triangle](array/118_pascals_triangle.md)
+   * [119 Pascal's Triangle II](array/119_pascals_triangle_ii.md)
+   * [56 Merge Intervals](array/56_merge_intervals.md)
+   * [57 Insert Interval](array/57_insert_interval.md)
 

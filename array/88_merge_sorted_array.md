@@ -15,6 +15,24 @@ You may assume that nums1 has enough space (size that is greater or equal to m +
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = m-1, j = n-1, k = m+n-1;
+        while (i >= 0 && j >= 0) {
+            nums1[k] = nums1[i] > nums2[j] ? nums1[i] : nums2[j];
+            if (nums1[i] > nums2[j]) i--;
+            else j--;
+            k--;
+        }
+        while (j >= 0) {
+            nums1[k] = nums2[j];
+            k--; j--;
+        }
+    }
+}
+
+// 以下是原解法，简单一些但是略微难读。
+
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i = m-1, j = n-1, k = m+n-1;
         while (i >= 0 && j >= 0) nums1[k--] = (nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
         while (j >= 0) nums1[k--] = nums2[j--];
     }

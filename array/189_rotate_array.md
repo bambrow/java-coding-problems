@@ -37,4 +37,36 @@ class Solution {
         }
     }
 }
+
+// 自己想出来的解法。首先寻找数组长度和k的最大公约数。
+// 这个最大公约数就是要替换的轮数，不过这里要注意各种边界条件。
+// 随后进行替换，每一轮从下标i开始，不断替换(i+k)%n的数，直到回到i为止。
+// 替换完全部轮数后，数组即转换完毕。
+
+class Solution {
+    public void rotate(int[] nums, int k) {
+        if (k <= 0) return;
+        if (nums.length <= 1) return;
+        int n = nums.length;
+        k %= n;
+        if (k == 0) return;
+        int round = gcd(n, k);
+        for (int i = 0; i < round; i++) {
+            int j = i;
+            int init = nums[j];
+            while ((j + k) % n != i) {
+                int temp = nums[(j+k)%n];
+                nums[(j+k)%n] = init;
+                init = temp;
+                j = (j + k) % n;
+            }
+            nums[i] = init;
+        }
+    }
+    private int gcd(int n, int k) {
+        if (n % k == 0) return k;
+        else return gcd(k, n%k);
+    }
+}
+
 ```
